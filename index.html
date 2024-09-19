@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
+	<title>Puzzle</title>
+</head>
+<body>
+	<button id="credit">Créditos</button>
+	<div class="credit-container">
+		<div>
+			<h1>Créditos de Imagens</h1>
+			<p>
+				Background:
+			</p>
+			<a href="https://br.freepik.com/vetores-gratis/molde-da-textura-do-vetor-de-madeira-padrao-sem-emenda-madeira-de-lei-material-piso-natural-parquet-claro-ilustracao-vetorial_11059494.htm#fromView=search&page=1&position=0&uuid=8d4ed8cc-3771-482b-b148-eba5771129e9" target="_blank">Imagem de macrovector no Freepik</a>
+	
+			<a href="https://br.freepik.com/fotos-gratis/textura-parquet_969003.htm#fromView=search&page=2&position=5&uuid=0fa6f6b4-265f-4cf4-b614-43d655616d6b" target="_blank">Imagem de fwstudio no Freepik</a>
+		</div>
+	</div>
+	<div class="time">
+		<i class="bi bi-hourglass-split"></i>
+		<p>
+			0:00
+		</p>
+	</div>
+	<div class="button-container">
+		<button class="start">
+			<div>
+				<i class="bi bi-play-fill"></i>
+			</div>
+		</button>
+		<p>&larr; Iniciar</p>
+	</div>
+	<div class="puzzle">
+		<div class="tiles">
+			<div class="tile">
+				1
+			</div>
+			<div class="tile">
+				2
+			</div>
+			<div class="tile">
+				3
+			</div>
+			<div class="tile">
+				4
+			</div>
+			<div class="tile">
+				5
+			</div>
+			<div class="tile">
+				6
+			</div>
+			<div class="tile">
+				7
+			</div>
+			<div class="tile">
+				8
+			</div>
+			<div class="tile empty">
+				9
+			</div>
+		</div>
+	</div>
+	<div class="victory">
+		<h1>Parabens</h1>
+		<h2 id="new-record">Seu Tempo</h2>
+		<p id="record">
+			0:00
+		</p>
+
+		<h2>Melhor Tempo</h2>
+		<p id="best-record"></p>
+		<button class="retry">
+			<i class="bi bi-arrow-clockwise"></i>
+		</button>
+	</div>
+</body>
+<script src="./scripts/main.js" type="text/javascript" charset="utf-8"></script>
+</html>

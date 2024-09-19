@@ -1,0 +1,240 @@
+@charset 'UTF-8';
+
+* {
+	margin: 0px;
+	padding: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	image-rendering: optimizeQuality;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #5C4033;
+	font-family: "New Amsterdam", sans-serif;
+	letter-spacing: 3px;
+	font-size: 1.2em;
+	position: relative;
+	gap: 8px;
+}
+
+/* PUZZLE */
+.puzzle {
+	background-image: url('./img/wood_texture.webp');
+	padding: 10px;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, .7);
+	border: 2px solid rgb(20, 20, 20);
+	margin-bottom: 30px;
+}
+
+.tiles {
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url('./img/wood_texture2.webp');
+	background-color: #5C4033;
+	width: 100%;
+}
+
+.tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	width: 33.33%;
+	height: 33.33%;
+	aspect-ratio: 1 / 1;
+	background-image: url('./img/wood_texture3.webp');
+	background-color: #D1A679;
+	border: 2px solid rgb(20, 20, 20);
+	text-align: center;
+	color: rgb(20, 20, 20);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+	transition: transform .2s ease, opacity 1s ease, filter 1s ease, box-shadow 1s ease;
+	will-change: transform, opacity, filter, box-shadow;
+}
+
+.empty {
+	opacity: 0;
+	filter: brightness(120%);
+	box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .6);
+}
+
+
+/* TIME */
+.time {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3em;
+	text-shadow: 0px 0px 5px black;
+	color: white;
+	gap: 10px;
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform .3s ease;
+}
+
+/* PLAY */
+div.button-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	max-width: 300px;
+	margin-left: 15px;
+}
+
+div.button-container p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	color: white;
+	font-size: 1.2em;
+	animation: point 1.5s linear infinite;
+}
+
+button.start {
+	transform: scale(1);
+	transition: transform .3s ease;
+	border-radius: 5px;
+	border: none;
+	font-size: 2em;
+	color: black;
+	background-color: #D1A679;
+	background-image: url('./img/wood_texture.webp');
+	padding: 3px;
+	border: 2px solid rgb(20, 20, 20);
+}
+
+button.start div {
+	background-image: url('./img/wood_texture3.webp');
+	border: 1px solid rgb(20, 20, 20);
+}
+
+div.victory, div.credit-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+}
+
+div.victory {
+	transform: translate(-50%, -50%) scale(0.1);
+	transition: transform .3s ease-in-out;
+	width: 100%;
+	max-width: 400px;
+	color: black;
+	border-radius: 5px;
+	padding: 20px;
+	outline: 2px dashed black;
+	outline-offset: -10px;
+	background-color: #D1A679;
+	background-image: url('./img/wood_texture3.webp');
+	visibility: hidden;
+	will-change: transform;
+}
+
+div.victory h1, div.victory p {
+	margin-bottom: 30px;
+}
+
+div.victory p {
+	border: 2px solid black;
+	padding: 5px 20px;
+	border-radius: 5px;
+}
+
+div.victory h1 {
+	border-bottom: 2px solid black;
+}
+
+button.retry {
+	font-size: 2em;
+	font-weight: bolder;
+	border: none;
+	background-color: transparent;
+}
+
+
+/* CREDITOS */
+button#credit {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+	text-transform: uppercase;
+}
+
+button#credit:hover {
+	background-color: white;
+	color: black;
+}
+
+div.credit-container {
+	transform: translate(-50%, -50%);
+	background-color: rgba(20, 20, 20, .6);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	visibility: hidden;
+}
+
+div.credit-container div {
+	background-color: #D1A679;
+	max-width: 400px;
+	padding: 15px;
+	border-radius: 8px;
+	border: 8px solid #5C4033;
+	box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, .6);
+}
+
+div.credit-container h1 {
+	margin-bottom: 30px;
+}
+
+div.credit-container p {
+	margin-bottom: 8px;
+}
+
+div.credit-container a {
+	display: block;
+	margin-bottom: 5px;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@keyframes point {
+	0% {
+		transform: translateX(15px);
+	} 50% {
+		transform: translateX(0px);
+	} 100% {
+		transform: translateX(15px);
+	}
+}
