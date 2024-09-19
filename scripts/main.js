@@ -96,13 +96,7 @@ async function startGame() {
 
 function updateTime() {
 	sec++
-
-	if (hour > 0) {
-		time.textContent = `${hour}:${min > 9 ? min: '0' + min }:${sec > 9 ? sec: '0' + sec }`
-	} else {
-		time.textContent = `${min}:${sec > 9 ? sec: '0' + sec}`
-	}
-
+	
 	if (sec >= 60) {
 		sec = 0
 		min++
@@ -111,6 +105,12 @@ function updateTime() {
 			min = 0
 			hour++
 		}
+	}
+
+	if (hour > 0) {
+		time.textContent = `${hour}:${min > 9 ? min: '0' + min }:${sec > 9 ? sec: '0' + sec }`
+	} else {
+		time.textContent = `${min}:${sec > 9 ? sec: '0' + sec}`
 	}
 }
 
