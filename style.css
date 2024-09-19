@@ -125,6 +125,7 @@ button.start {
 button.start div {
 	background-image: url('./img/wood_texture3.webp');
 	border: 1px solid rgb(20, 20, 20);
+	overflow: hidden;
 }
 
 div.victory, div.credit-container {
@@ -237,4 +238,54 @@ div.credit-container a {
 	} 100% {
 		transform: translateX(15px);
 	}
+}
+
+@media (prefers-color-scheme: dark) {
+	* {
+        background-color: inherit !important;
+        color: inherit !important;
+        border-color: inherit !important;
+    }
+    
+    body {
+        background-color: #5C4033 !important;
+        color: black !important;
+    }
+
+    .puzzle,
+    .tiles,
+    .tile,
+    button.start,
+    div.credit-container div {
+        background-color: #D1A679 !important;
+        border-color: rgb(20, 20, 20) !important;
+        color: black !important;
+    }
+    
+    .time {
+    	color: white !important;
+    }
+    
+    div.victory {
+    	background-color: transparent !important;
+    	color: black !important;
+    }
+    
+    div.credit-container a {
+    	color: blue !important;
+    }
+    
+    div.button-container p {
+    	color: white !important;
+    }
+
+    button#credit {
+        border-color: white !important;
+        color: white !important;
+    }
+
+    button#credit:hover {
+        background-color: white !important;
+        color: black !important;
+    }
 }

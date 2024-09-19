@@ -77,9 +77,9 @@ async function startGame() {
 	buttonStart.style.transform = 'scale(0)'
 	await delay(300)
 	
-	tile = tile.sort(() => Math.random() - .5)
+	//tile = tile.sort(() => Math.random() - .5)
 	tile.forEach(t => {
-		tileContainer.appendChild(t)
+	//	tileContainer.appendChild(t)
 	})
 	
 	isPlaying = true
