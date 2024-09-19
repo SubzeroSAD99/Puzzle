@@ -19,6 +19,7 @@ const creditContainer = divCredit.querySelector('div')
 const buttonStart = document.querySelector('.start')
 const buttonRetry = document.querySelector('.retry')
 const buttonCredit = document.querySelector('#credit')
+
 let sec = min = hour = 0
 let isPlaying = false
 let inTransition = false
@@ -46,7 +47,9 @@ tile.forEach((t, index) => {
 			inTransition = false
 			return
 		}
-
+		
+		await audioSlide.play()
+		
 		t.style.transform = `translate(${emptyTileRect.left - tileRect.left}px, ${emptyTileRect.top - tileRect.top}px)`
 		emptyTile.style.transform = `translate(${tileRect.left - emptyTileRect.left}px, ${tileRect.top - emptyTileRect.top}px)`
 
@@ -77,9 +80,9 @@ async function startGame() {
 	buttonStart.style.transform = 'scale(0)'
 	await delay(300)
 	
-	tile = tile.sort(() => Math.random() - .5)
+	//tile = tile.sort(() => Math.random() - .5)
 	tile.forEach(t => {
-		tileContainer.appendChild(t)
+		//tileContainer.appendChild(t)
 	})
 	
 	isPlaying = true
