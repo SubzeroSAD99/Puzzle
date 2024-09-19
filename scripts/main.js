@@ -48,8 +48,6 @@ tile.forEach((t, index) => {
 			return
 		}
 		
-		await audioSlide.play()
-		
 		t.style.transform = `translate(${emptyTileRect.left - tileRect.left}px, ${emptyTileRect.top - tileRect.top}px)`
 		emptyTile.style.transform = `translate(${tileRect.left - emptyTileRect.left}px, ${tileRect.top - emptyTileRect.top}px)`
 
