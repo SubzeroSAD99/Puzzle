@@ -216,3 +216,9 @@ function delay(ms) {
 buttonRetry.onclick = retry
 buttonStart.onclick = startGame
 buttonCredit.onclick = showCredit
+
+window.addEventListener('load', () => {
+	const loadingScreen = document.querySelector('#loading-screen')
+
+    loadingScreen.style.display = 'none'
+})

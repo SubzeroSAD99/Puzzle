@@ -27,6 +27,20 @@ body {
 	gap: 8px;
 }
 
+div#loading-screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	color: white;
+	background-color: rgba(0, 0, 0, .9);
+	z-index: 1;
+}
+
 /* PUZZLE */
 .puzzle {
 	background-image: url('./img/wood_texture.webp');
@@ -250,6 +264,11 @@ div.credit-container a {
     body {
         background-color: #5C4033 !important;
         color: black !important;
+    }
+    
+    div#loading-screen {
+    	color: white !important;
+		background-color: rgba(0, 0, 0, .8) !important;
     }
 
     .puzzle,
