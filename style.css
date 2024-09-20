@@ -25,6 +25,7 @@ body {
 	font-size: 1.2em;
 	position: relative;
 	gap: 8px;
+	user-select: none;
 }
 
 div#loading-screen {
